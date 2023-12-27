@@ -1,11 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
-import postsReducer from '../features/posts/postsSlice';
+import { apiSlice } from "../features/api/apiSlice";
 import usersReducer from '../features/users/usersSlice';
 
 
 export const store = configureStore({
     reducer: {
-        posts: postsReducer,
+        [apiSlice.reducerPath]: apiSlice.reducer,
         users: usersReducer
-    }
+    },
+    // required to use when we use react toolkit query (RTKQuery)
+    middleware: getDefaultMiddleware => getDefaultMiddleware().concat(apiSlice.middleware)
 })
