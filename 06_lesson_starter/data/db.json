@@ -4,7 +4,7 @@
       "userId": 1,
       "id": 1,
       "title": "delectus aut autem",
-      "completed": true
+      "completed": false
     },
     {
       "userId": 1,
@@ -1175,12 +1175,6 @@
       "id": 200,
       "title": "ipsam aperiam voluptates qui",
       "completed": false
-    },
-    {
-      "userId": 1,
-      "title": "New todo!",
-      "completed": false,
-      "id": 201
     }
   ]
 }
